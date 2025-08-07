@@ -1,0 +1,27 @@
+@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>Map</PageTitle>
+
+<style>
+    .full-map {
+        height: 80vh;
+        width: 80vw;
+    }
+</style>
+
+
+<div id="map" class="full-map">
+    <!--  -->
+</div>
+
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initMap");
+        }
+    }
+}
