@@ -100,14 +100,67 @@ window.initMap = () => {
         { nombre: "PROYECTOS", coords: [14.673202081768798, -90.48745869942127] },
         { nombre: "PROYECTOS 4-4", coords: [14.66791760154767, -90.49195925981476] },
         { nombre: "CIPRESALES", coords: [14.665373027169508, -90.49379507704836] },
-        { nombre: "", coords: [] },
-        { nombre: "", coords: [] }
+        { nombre: "ACADEMIA", coords: [14.659107029501397, -90.49405240233516] },
+        { nombre: "QUINTANAL", coords: [14.658561018515194, -90.49599749257114] },
+        { nombre: "CORPUS CHRISTI", coords: [14.656950367863557, -90.49684329485655] },
+        { nombre: "CENTRO ZONA 6", coords: [14.654893296547451, -90.49608275016115] },
+        { nombre: "JOSÉ MARTÍ", coords: [14.652949527307696, -90.49994923102798] },
+        { nombre: "IGSS ZONA 6", coords: [14.651562986089196, -90.49744026611606] },
+        { nombre: "PARROQUIA", coords: [14.649999401237876, -90.49979543399283] },
+        { nombre: "CERRO DEL CARMEN", coords: [14.648107709920478, -90.50489234390355] },
+        { nombre: "SANTA TERESA", coords: [14.644064542759525, -90.50916380692165] },
+        { nombre: "COLÓN", coords: [14.639999146960152, -90.5083208257521] },
+        { nombre: "CAPUCHINAS", coords: [14.638590445334119, -90.50990643604669] },
+        { nombre: "FRANCOS MONROY", coords: [14.632671653138171, -90.50936966738135] },
+        { nombre: "PLAZA BARRIOS/FEGUA", coords: [14.630531011647568, -90.51175404776862] }
     ];
 
     estacionesLinea_6.forEach(estacion => {
         L.circle(estacion.coords, {
             color: 'yellow',
             fillColor: 'rgba(109, 195, 39, 1)',
+            fillOpacity: 0.5,
+            radius: 15
+        }).addTo(map).bindPopup(estacion.nombre);
+    });
+
+    // Linea 7
+    const estacionesLinea_7 = [
+        { nombre: "USAC PERIFÉRICO", coords: [14.592976613566828, -90.55065312194282] },
+        { nombre: "GRANAI - DIR. USAC PERIFÉRICO", coords: [14.599586013656575, -90.55953042600675] },
+        { nombre: "GRANAI - DIR. LA MERCED", coords: [14.59966628963404, -90.55916722702153] },
+        { nombre: "RODOLFO ROBLES - DIR. USAC PERIFÉRICO", coords: [14.607641019048234, -90.55812698390072] },
+        { nombre: "RODOLFO ROBLES - DIR. LA MERCED", coords: [14.607081955893284, -90.55821580316962] },
+        { nombre: "CEJUSA - DIR. USAC PERIFÉRICO", coords: [14.61010460218168, -90.55643369802794] },
+        { nombre: "CEJUSA - DIR. LA MERCED", coords: [14.609475601751537, -90.55651789293579] },
+        { nombre: "SAN JORGE - DIR. USAC PERIFÉRICO", coords: [14.61931315922741, -90.55656108773745] },
+        { nombre: "SAN JORGE - DIR. LA MERCED", coords: [14.618373850938296, -90.55568969725554] },
+        { nombre: "ROOSEVELT - DIR. USAC PERIFÉRICO", coords: [14.626054751873738, -90.55900492369292] },
+        { nombre: "ROOSEVELT - DIR. LA MERCED", coords: [14.626274298124388, -90.55827053783138] },
+        { nombre: "SAN JUAN - DIR. USAC PERIFÉRICO", coords: [14.630548231433544, -90.55498938110004] },
+        { nombre: "SAN JUAN - DIR. LA MERCED", coords: [14.630280453204126, -90.55474891504046] },
+        { nombre: "CIUDAD DE PLATA II - DIR. USAC PERIFÉRICO", coords: [14.6383804293265, -90.55081786575226] },
+        { nombre: "CIUDAD DE PLATA II - DIR. LA MERCED", coords: [14.638335182548253, -90.55053759667841] },
+        { nombre: "VILLA LINDA - DIR. USAC PERIFÉRICO", coords: [14.642328843869423, -90.54547861114126] },
+        { nombre: "VILLA LINDA - DIR. LA MERCED", coords: [14.641327610113716, -90.54625481366972] },
+        { nombre: "4 DE FEBRERO - DIR.  USAC PERIFÉRICO", coords: [14.644498786171523, -90.540816798497] },
+        { nombre: "4 DE FEBRERO - DIR. LA MERCED", coords: [14.644852356455505, -90.53965687024531] },
+        { nombre: "BETHANIA - DIR. USAC PERIFÉRICO", coords: [14.645882099948276, -90.53686135083758] },
+        { nombre: "BETHANIA - DIR. COLÓN", coords: [14.645507261810195, -90.53659979916502] },
+        { nombre: "INCIENSO - DIR. USAC PERIFÉRICO", coords: [14.648797779942548, -90.53139706221084] },
+        { nombre: "INCIENSO - DIR. LA MERCED", coords: [14.64871566559726, -90.53098671694121] },
+        { nombre: "SANTUARIO DE GUADALUPE", coords: [14.642028971298002, -90.51896518955012] },
+        { nombre: "SAN JUAN DE DIOS", coords: [14.6412911745403, -90.5188854968257] },
+        { nombre: "ARCHIVO GENERAL", coords: [14.642445642153039, -90.51569478949712] },
+        { nombre: "PASAJE AYCINENA", coords: [14.640268620665255, -90.51306173147064] },
+        { nombre: "CRUZ ROJA", coords: [14.644270242959296, -90.51089729130068] },
+        { nombre: "LA MERCED", coords: [14.643479632507518, -90.5079241982266] }
+    ];
+
+    estacionesLinea_7.forEach(estacion => {
+        L.circle(estacion.coords, {
+            color: 'green',
+            fillColor: 'rgba(196, 145, 88, 1)',
             fillOpacity: 0.5,
             radius: 15
         }).addTo(map).bindPopup(estacion.nombre);

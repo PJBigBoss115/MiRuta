@@ -13,57 +13,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = MiRuta
 build_property.RootNamespace = MiRuta
-build_property.ProjectDir = C:\Users\pedro.aguilar\Documents\App_NET\MiRuta\
+build_property.ProjectDir = C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\pedro.aguilar\Documents\App_NET\MiRuta
+build_property.MSBuildProjectDirectory = C:\Users\pedro.aguilar\Documents\GitHub\MiRuta
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/App.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Pages/Counter.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Pages/Home.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Pages/Information.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/Information.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mb3JtYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Pages/MapHome.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/MapHome.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Pages/More.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/More.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9yZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Pages/News.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/News.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Pages/Weather.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/_Imports.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Layout/MainLayout.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-g7b9wzjkqj
 
-[C:/Users/pedro.aguilar/Documents/App_NET/MiRuta/Layout/NavMenu.razor]
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1cp4c4p48h
