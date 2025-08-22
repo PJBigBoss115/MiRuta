@@ -1283,8 +1283,6 @@ C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framewo
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.50iqa8w3ys.js
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.pk43x8e436.wasm
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.ew19f13umk.js
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.m0sbq6o89w.wasm
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.fo77dzmt9t.pdb
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.phaa9r44xv.wasm.gz
@@ -1487,8 +1485,6 @@ C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framewo
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.m0sbq6o89w.wasm.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.fo77dzmt9t.pdb.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\MiRuta.staticwebassets.runtime.json
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\MiRuta.staticwebassets.endpoints.json
@@ -1949,7 +1945,6 @@ C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\a7tne
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\egmosxlt8s-k8y4vlu10z.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\d9l3s2nnua-4d85u1mtcx.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\2wovobn8t1-y0olr4q2ur.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\bt7xnmjyka-6qfeec9vy3.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\nxxnm87nui-iag0ou56lh.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\26fh17ve79-md9yvkcqlf.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\cxcuodnc4h-mjqsn3p886.gz
@@ -2154,9 +2149,6 @@ C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\j4kpw
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\vwkqd9yy9w-tjcz0u77k5.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\4gfypphvm6-tptq2av103.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\lhpotgcnpj-lfu7j35m59.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\k8lxbkj0vb-m0sbq6o89w.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\l3rc9jae8g-fo77dzmt9t.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\v3zwm9fuj1-9vt7i3u2bo.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\staticwebassets.development.json
@@ -2166,3 +2158,11 @@ C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\MiRuta.dll
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\refint\MiRuta.dll
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\MiRuta.pdb
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\ref\MiRuta.dll
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\bt7xnmjyka-4k24224ldj.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.232v5xl5vm.wasm
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.em40yeuoky.pdb
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.232v5xl5vm.wasm.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.em40yeuoky.pdb.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\k8lxbkj0vb-232v5xl5vm.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\l3rc9jae8g-em40yeuoky.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\v3zwm9fuj1-4cdefjk75a.gz

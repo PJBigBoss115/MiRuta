@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MiRuta",
   "resources": {
-    "hash": "sha256-lw+3cHBfGc6UDErX1fv5I31F2e0ZLE2MPUHwNkbdxr8=",
+    "hash": "sha256-hP/2NFykUvMyJVdLEWHFUM8fyRDmlNL0fm1edjDFYlE=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.phaa9r44xv.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.4o2vz6uw5j.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -201,8 +201,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "MiRuta.m0sbq6o89w.wasm": "MiRuta.wasm",
-      "MiRuta.fo77dzmt9t.pdb": "MiRuta.pdb"
+      "MiRuta.232v5xl5vm.wasm": "MiRuta.wasm",
+      "MiRuta.em40yeuoky.pdb": "MiRuta.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.50iqa8w3ys.js": "sha256-pQdXuxfVeqYHOwd5HUM2ERd7OnXirj9JTF37b6OdTAc="
@@ -412,10 +412,10 @@
       "WindowsBase.u25hol0de4.wasm": "sha256-CgB28KCiYKHd4yK6IM0PJ526P7IbRCpNkGTqn+cLwxs=",
       "mscorlib.brg9pkj3je.wasm": "sha256-FzZwzxUYYyg3qxc7Km8r50UKAmRWrIeckSFG1NTHKNU=",
       "netstandard.wuzd3f1y6v.wasm": "sha256-yAXc0deBIRkWTVXqADZfhgZtrxGgJCIbZYVtA0NjvdM=",
-      "MiRuta.m0sbq6o89w.wasm": "sha256-lhS34aWh/jJu4FHMYflAXesUq1z0iyAvtEnw+kITMII="
+      "MiRuta.232v5xl5vm.wasm": "sha256-TvXP9ovGIrQlZJcNNxQwuimNHOVXIy5/uIrd2WutPYU="
     },
     "pdb": {
-      "MiRuta.fo77dzmt9t.pdb": "sha256-n1usjnwZtNJ5vxJViaGh82JRMNEFPWdGkVXrmv3L5Zs="
+      "MiRuta.em40yeuoky.pdb": "sha256-ZlFikAjeW9ka0CjZ9wYhPR2cYBMBpFRM5nrIa706p6A="
     }
   },
   "cacheBootResources": true,

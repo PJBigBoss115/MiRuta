@@ -1,5 +1,8 @@
 @page "/"
 @inject IJSRuntime JS
+@inject OpenRouteService RouteService
+@using System.Text.Json
+
 
 <PageTitle>Mapa</PageTitle>
 
@@ -15,13 +18,96 @@
     <!--  -->
 </div>
 
+<br>
+
+<button @onclick="DrawRoute">Calcular Ruta</button>
 
 @code {
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            await JS.InvokeVoidAsync("initMap");
+            await JS.InvokeVoidAsync("mapApp.initMap");
         }
     }
+
+    private static List<double[]> DecodePolyline(string polyline)
+    {
+        var poly = new List<double[]>();
+        int index = 0, len = polyline.Length;
+        int lat = 0, lng = 0;
+
+        while (index < len)
+        {
+            int b, shift = 0, result = 0;
+            do
+            {
+                b = polyline[index++] - 63;
+                result |= (b & 0x1f) << shift;
+                shift += 5;
+            } while (b >= 0x20);
+            int dlat = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
+            lat += dlat;
+
+            shift = 0;
+            result = 0;
+            do
+            {
+                b = polyline[index++] - 63;
+                result |= (b & 0x1f) << shift;
+                shift += 5;
+            } while (b >= 0x20);
+            int dlng = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
+            lng += dlng;
+
+            double latitude = lat / 1E5;
+            double longitude = lng / 1E5;
+            poly.Add(new[] { longitude, latitude });
+        }
+
+        return poly;
+    }
+
+    private async Task DrawRoute()
+    {
+        double startLat = 14.574514388807655, startLon = -90.52417275536979;
+        double endLat = 14.6246682979541, endLon = -90.51631280208495;
+
+        var routeJson = await RouteService.GetRouteAsync(startLon, startLat, endLon, endLat);
+
+        // Parseamos el JSON para extraer la polyline
+        using var doc = JsonDocument.Parse(routeJson);
+        var geometry = doc.RootElement
+                        .GetProperty("routes")[0]
+                        .GetProperty("geometry")
+                        .GetString();
+
+        // ✅ Aquí usas el método que colocaste arriba
+        var coordinates = DecodePolyline(geometry);
+
+        // Creamos el objeto GeoJSON válido
+        var geoJson = new
+        {
+            type = "FeatureCollection",
+            features = new[]
+            {
+                new
+                {
+                    type = "Feature",
+                    geometry = new
+                    {
+                        type = "LineString",
+                        coordinates = coordinates
+                    },
+                    properties = new { }
+                }
+            }
+        };
+
+        // Serializamos y enviamos a JS
+        var geoJsonString = JsonSerializer.Serialize(geoJson);
+        await JS.InvokeVoidAsync("mapApp.dibujarRuta", geoJsonString);
+    }
+
 }
