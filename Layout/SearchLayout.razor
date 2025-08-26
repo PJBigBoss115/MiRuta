@@ -1,0 +1,43 @@
+<style>
+    .searchContainer {
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #d6d5d5;
+        border-radius: 10px;
+        display: flex;
+        margin-bottom: 35px;
+    }
+
+    #searchResults {
+        position: absolute;
+        z-index: 9999;
+        max-width: 1300px;
+        margin-right: 40px;
+        @* margin: 35px, 0, 35px, 0; *@
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="searchContainer">
+    <div class="container mt-2 mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <label for="destinationInput" class="form-label">¿A dónde quieres ir?</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Ej. Parque Central...">
+                    <button class="btn btn-primary" type="button" id="searchBtn">Ir</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <ul id="searchResults" class="list-group mt-2 mb-4"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code{
+    @*  *@
+}

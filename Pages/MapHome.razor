@@ -3,33 +3,128 @@
 @inject OpenRouteService RouteService
 @using System.Text.Json
 
-
 <PageTitle>Mapa</PageTitle>
 
 <style>
     .full-map {
-        height: 80vh;
-        width: 80vw;
+        height: 70vh;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 </style>
 
-
-<div id="map" class="full-map">
-    <!--  -->
+<div>
+    <SearchLayout />
+    <div class="mb-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12">
+                <div id="map" class="full-map"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<br>
-
-<button @onclick="DrawRoute">Calcular Ruta</button>
-
 @code {
+    private DotNetObjectReference<MapHome>? dotNetRef;
+    private List<LineaBus> MisLineas = new();
+    private double[] UbicacionUsuario = new double[2];
+
+    public class Estacion
+    {
+        public string Nombre { get; set; }
+        public double[] Coords { get; set; }
+    }
+
+    public class LineaBus
+    {
+        public string Nombre { get; set; }
+        public List<Estacion> Estaciones { get; set; }
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            await JS.InvokeVoidAsync("mapApp.initMap");
+            dotNetRef = DotNetObjectReference.Create(this);
+
+            await JS.InvokeVoidAsync("mapApp.initMap", dotNetRef);
+
+            await JS.InvokeVoidAsync("initSearch");
+
+            await JS.InvokeVoidAsync("sendStations", dotNetRef);
         }
+    }
+
+    [JSInvokable]
+    public Task getStations(string json)
+    {
+        var lineasDict = JsonSerializer.Deserialize<Dictionary<string, List<Estacion>>>(json);
+        
+        MisLineas = lineasDict.Select(kvp => new LineaBus
+        {
+            Nombre = kvp.Key,
+            Estaciones = kvp.Value
+        }).ToList();
+
+        @* Console.WriteLine($"Se recibieron {MisLineas.Count} líneas."); *@
+        return Task.CompletedTask;
+    }
+
+    [JSInvokable]
+    public Task userCoords(string json)
+    {
+        var coord = JsonSerializer.Deserialize<Dictionary<string, double>>(json);
+        
+        UbicacionUsuario = new[] { coord["lat"], coord["lon"] };
+
+        @* Console.WriteLine($"Ubicación del usuario: {UbicacionUsuario[0]}, {UbicacionUsuario[1]}"); *@
+        return Task.CompletedTask;
+    }
+
+    private Estacion EncontrarEstacionCercana(double[] punto, List<Estacion> estaciones)
+    {
+        return estaciones.OrderBy(e => CalcularDistancia(punto, e.Coords)).First();
+    }
+
+    private LineaBus EncontrarLineaConAmbasEstaciones(Estacion inicio, Estacion fin)
+    {
+        return MisLineas.FirstOrDefault(linea =>
+            linea.Estaciones.Any(e => e.Nombre == inicio.Nombre) &&
+            linea.Estaciones.Any(e => e.Nombre == fin.Nombre));
+    }
+
+    @* Para mapear las rutas *@
+    private List<double[]> ObtenerTramo(LineaBus linea, Estacion inicio, Estacion fin)
+    {
+        var estaciones = linea.Estaciones;
+        var idxInicio = estaciones.FindIndex(e => e.Nombre == inicio.Nombre);
+        var idxFin = estaciones.FindIndex(e => e.Nombre == fin.Nombre);
+
+        if (idxInicio > idxFin)
+            estaciones.Reverse();
+
+        return estaciones
+            .Skip(Math.Min(idxInicio, idxFin))
+            .Take(Math.Abs(idxInicio - idxFin) + 1)
+            .Select(e => new[] { e.Coords[1], e.Coords[0] })
+            .ToList();
+    }
+
+    private double CalcularDistancia(double[] c1, double[] c2)
+    {
+        var R = 6371e3;
+        var φ1 = c1[0] * Math.PI / 180;
+        var φ2 = c2[0] * Math.PI / 180;
+        var Δφ = (c2[0] - c1[0]) * Math.PI / 180;
+        var Δλ = (c2[1] - c1[1]) * Math.PI / 180;
+
+        var a = Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2) +
+                Math.Cos(φ1) * Math.Cos(φ2) *
+                Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2);
+        var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+        return R * c;
     }
 
     private static List<double[]> DecodePolyline(string polyline)
@@ -75,18 +170,15 @@
         double endLat = 14.6246682979541, endLon = -90.51631280208495;
 
         var routeJson = await RouteService.GetRouteAsync(startLon, startLat, endLon, endLat);
-
-        // Parseamos el JSON para extraer la polyline
         using var doc = JsonDocument.Parse(routeJson);
-        var geometry = doc.RootElement
-                        .GetProperty("routes")[0]
-                        .GetProperty("geometry")
-                        .GetString();
 
-        // ✅ Aquí usas el método que colocaste arriba
+        var geometry = doc.RootElement
+            .GetProperty("routes")[0]
+            .GetProperty("geometry")
+            .GetString();
+
         var coordinates = DecodePolyline(geometry);
 
-        // Creamos el objeto GeoJSON válido
         var geoJson = new
         {
             type = "FeatureCollection",
@@ -105,7 +197,6 @@
             }
         };
 
-        // Serializamos y enviamos a JS
         var geoJsonString = JsonSerializer.Serialize(geoJson);
         await JS.InvokeVoidAsync("mapApp.dibujarRuta", geoJsonString);
     }

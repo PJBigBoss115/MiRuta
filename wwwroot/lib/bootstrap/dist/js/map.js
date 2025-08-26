@@ -2,9 +2,34 @@ window.mapApp = {
     map: null,
     routeLayer: null,
 
-    initMap: function () {
+    initMap: function (dotnetHelper) {
+        window.dotnetHelper = dotnetHelper;
+        
         const map = L.map('map').setView([14.6349, -90.5069], 13);
         this.map = map;
+
+        // Plugins
+
+        L.Control.geocoder({
+            defaultMarkGeocode: true,
+            position: 'topleft'
+        }).addTo(map);
+
+        // L.control.compass({
+        //     position: 'topright',
+        //     autoActive: true,
+        //     showDigit: true
+        // }).addTo(map);
+
+        L.control.locate({
+            position: 'topleft',
+            flyTo: true,
+            strings: {
+                title: "Mostrar mi ubicación"
+            }
+        }).addTo(map);
+
+        // end Plugins
 
         const redIcon = L.AwesomeMarkers.icon({
             icon: 'fa-solid fa-bus',
@@ -58,7 +83,7 @@ window.mapApp = {
             .bindPopup('Linea 18')
             .openPopup();
 
-        // Paradas de cada Ruta
+        // Estaciones de cada Ruta
 
         // Linea 1
         const estacionesLinea_1 = [
@@ -253,26 +278,40 @@ window.mapApp = {
             }).addTo(map).bindPopup(estacion.nombre);
         });
 
+        let userMarker = null;
+
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function (position) {
+            navigator.geolocation.watchPosition(function (position) {
                 const lat = position.coords.latitude;
                 const lon = position.coords.longitude;
 
-                const userIcon = L.AwesomeMarkers.icon({
-                    icon: 'fa-location-dot',
-                    markerColor: 'green',
-                    prefix: 'fa'
-                });
+                const coords = {
+                    lat: lat,
+                    lon: lon
+                };
 
-                const marker = L.marker([lat, lon], { icon: userIcon }).addTo(window.mapApp.map)
+                window.dotnetHelper.invokeMethodAsync('userCoords', JSON.stringify(coords));
+
+                if (userMarker) {
+                    userMarker.setLatLng([lat, lon]);
+                } else {
+                    userMarker = L.circleMarker([lat, lon], {
+                        radius: 10,
+                        color: 'rgba(165, 34, 197, 1)',
+                        fillColor: 'cyan',
+                        fillOpacity: 0.8
+                    }).addTo(window.mapApp.map)
                     .bindPopup("¡Estás aquí!")
                     .openPopup();
 
-                window.mapApp.map.setView([lat, lon], 15);
-
+                    window.mapApp.map.setView([lat, lon], 15);
+                }
             }, function (error) {
-                // console.error("Error obteniendo ubicación:", error);
                 alert("No se pudo obtener tu ubicación.");
+            }, {
+                enableHighAccuracy: true,
+                maximumAge: 10000,
+                timeout: 10000
             });
         } else {
             alert("La geolocalización no es soportada por tu navegador.");
@@ -286,14 +325,74 @@ window.mapApp = {
     dibujarRuta: function (geoJsonString) {
         try {
             const geoJson = JSON.parse(geoJsonString);
-            console.log("GeoJSON recibido:", geoJson);
+            // console.log("GeoJSON recibido:", geoJson);
 
             const layer = L.geoJSON(geoJson);
-            console.log("Layer generado:", layer);
+            // console.log("Layer generado:", layer);
 
             layer.addTo(this.map);
         } catch (e) {
-            console.error("Error al parsear GeoJSON:", e);
+            // console.error("Error al parsear GeoJSON:", e);
         }
     }
 };
+
+// Busqueda de destino
+
+function initSearch() {
+    const input = document.getElementById("searchInput");
+    const button = document.getElementById("searchBtn");
+    const resultsList = document.getElementById("searchResults");
+
+    if (!input || !button || !resultsList) {
+        // console.warn("No se encontró el input, botón o contenedor de resultados.");
+        return;
+    }
+
+    button.addEventListener("click", async () => {
+        const query = input.value.trim();
+        resultsList.innerHTML = '';
+
+        if (!query) return alert("Escribe una dirección para buscar.");
+
+        const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (!data.length) {
+                resultsList.innerHTML = '<li class="list-group-item text-muted">Sin resultados</li>';
+                return;
+            }
+
+            data.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.className = "list-group-item list-group-item-action";
+                li.style.cursor = "pointer";
+                li.textContent = item.display_name;
+                li.addEventListener("click", () => {
+                    const lat = parseFloat(item.lat);
+                    const lon = parseFloat(item.lon);
+
+                    // Pasar la direccion aqui
+
+                    window.mapApp.map.setView([lat, lon], 15);
+                    L.marker([lat, lon]).addTo(window.mapApp.map)
+                        .bindPopup(`📍 ${item.display_name}`)
+                        .openPopup();
+
+                    resultsList.innerHTML = '';
+                });
+
+                resultsList.appendChild(li);
+            });
+
+        } catch (err) {
+            // console.error("Error en la búsqueda:", err);
+            alert("Ocurrió un error al buscar.");
+        }
+    });
+}
+
+window.initSearch = initSearch;
