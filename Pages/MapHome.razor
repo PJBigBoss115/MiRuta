@@ -2,6 +2,8 @@
 @inject IJSRuntime JS
 @inject OpenRouteService RouteService
 @using System.Text.Json
+@using System.Text.Json.Serialization
+
 
 <PageTitle>Mapa</PageTitle>
 
@@ -23,16 +25,26 @@
             </div>
         </div>
     </div>
+
+    <div class="mb-2">
+        <div class="row text-center">
+            <div class="col-12 col-md-12">
+                <button type="button" class="btn btn-success" @onclick="GenerarRutaCompleta">Cómo llegar</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 @code {
     private DotNetObjectReference<MapHome>? dotNetRef;
     private List<LineaBus> MisLineas = new();
     private double[] UbicacionUsuario = new double[2];
+    private double[] UbicacionDestino = new double[2];
 
     public class Estacion
     {
         public string Nombre { get; set; }
+        [JsonPropertyName("coords")]
         public double[] Coords { get; set; }
     }
 
@@ -82,6 +94,17 @@
         return Task.CompletedTask;
     }
 
+    [JSInvokable]
+    public Task destinationCoords(string json)
+    {
+        var coordDest = JsonSerializer.Deserialize<Dictionary<string, double>>(json);
+        
+        UbicacionDestino = new[] { coordDest["lat"], coordDest["lon"] };
+
+        @* Console.WriteLine($"Ubicación del destino: {UbicacionDestino[0]}, {UbicacionDestino[1]}"); *@
+        return Task.CompletedTask;
+    }
+
     private Estacion EncontrarEstacionCercana(double[] punto, List<Estacion> estaciones)
     {
         return estaciones.OrderBy(e => CalcularDistancia(punto, e.Coords)).First();
@@ -97,7 +120,8 @@
     @* Para mapear las rutas *@
     private List<double[]> ObtenerTramo(LineaBus linea, Estacion inicio, Estacion fin)
     {
-        var estaciones = linea.Estaciones;
+        var estaciones = linea.Estaciones.ToList();
+
         var idxInicio = estaciones.FindIndex(e => e.Nombre == inicio.Nombre);
         var idxFin = estaciones.FindIndex(e => e.Nombre == fin.Nombre);
 
@@ -107,12 +131,17 @@
         return estaciones
             .Skip(Math.Min(idxInicio, idxFin))
             .Take(Math.Abs(idxInicio - idxFin) + 1)
-            .Select(e => new[] { e.Coords[1], e.Coords[0] })
+            .Select(e => e?.Coords != null && e.Coords.Length == 2
+                ? new[] { e.Coords[1], e.Coords[0] }
+                : new double[] { 0, 0 })
             .ToList();
     }
-
+    
     private double CalcularDistancia(double[] c1, double[] c2)
     {
+        if (c1 == null || c2 == null || c1.Length != 2 || c2.Length != 2)
+            return double.MaxValue;
+
         var R = 6371e3;
         var φ1 = c1[0] * Math.PI / 180;
         var φ2 = c2[0] * Math.PI / 180;
@@ -164,10 +193,10 @@
         return poly;
     }
 
-    private async Task DrawRoute()
+    private async Task DrawRoute(double[] origen, double[] destino)
     {
-        double startLat = 14.574514388807655, startLon = -90.52417275536979;
-        double endLat = 14.6246682979541, endLon = -90.51631280208495;
+        double startLat = origen[0], startLon = origen[1];
+        double endLat = destino[0], endLon = destino[1];
 
         var routeJson = await RouteService.GetRouteAsync(startLon, startLat, endLon, endLat);
         using var doc = JsonDocument.Parse(routeJson);
@@ -199,6 +228,54 @@
 
         var geoJsonString = JsonSerializer.Serialize(geoJson);
         await JS.InvokeVoidAsync("mapApp.dibujarRuta", geoJsonString);
+    }
+
+    private async Task DibujarTramoEnMapa(List<double[]> tramo)
+    {
+        var geoJson = new
+        {
+            type = "FeatureCollection",
+            features = new[]
+            {
+                new
+                {
+                    type = "Feature",
+                    geometry = new
+                    {
+                        type = "LineString",
+                        coordinates = tramo
+                    },
+                    properties = new { color = "#ff0000" }
+                }
+            }
+        };
+
+        var geoJsonString = JsonSerializer.Serialize(geoJson);
+        await JS.InvokeVoidAsync("mapApp.dibujarRuta", geoJsonString);
+    }
+
+    private async Task GenerarRutaCompleta()
+    {
+        var todasLasEstaciones = MisLineas.SelectMany(l => l.Estaciones).ToList();
+
+        var estacionInicio = EncontrarEstacionCercana(UbicacionUsuario, todasLasEstaciones);
+        var estacionFin = EncontrarEstacionCercana(UbicacionDestino, todasLasEstaciones);
+
+        var linea = EncontrarLineaConAmbasEstaciones(estacionInicio, estacionFin);
+
+        if (linea == null)
+        {
+            await JS.InvokeVoidAsync("alert", "No hay una línea de bus directa entre el origen y el destino.");
+            return;
+        }
+
+        var tramoEstaciones = ObtenerTramo(linea, estacionInicio, estacionFin);
+
+        await DrawRoute(UbicacionUsuario, estacionInicio.Coords);
+
+        await DibujarTramoEnMapa(tramoEstaciones);
+
+        await DrawRoute(estacionFin.Coords, UbicacionDestino);
     }
 
 }

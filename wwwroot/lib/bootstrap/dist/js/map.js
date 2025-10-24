@@ -15,12 +15,6 @@ window.mapApp = {
             position: 'topleft'
         }).addTo(map);
 
-        // L.control.compass({
-        //     position: 'topright',
-        //     autoActive: true,
-        //     showDigit: true
-        // }).addTo(map);
-
         L.control.locate({
             position: 'topleft',
             flyTo: true,
@@ -83,7 +77,9 @@ window.mapApp = {
             .bindPopup('Linea 18')
             .openPopup();
 
-        // Estaciones de cada Ruta
+        //////////////////////////////////////    
+        // Estaciones de cada Ruta          //
+        //////////////////////////////////////
 
         // Linea 1
         const estacionesLinea_1 = [
@@ -307,14 +303,14 @@ window.mapApp = {
                     window.mapApp.map.setView([lat, lon], 15);
                 }
             }, function (error) {
-                alert("No se pudo obtener tu ubicación.");
+                // alert("No se pudo obtener tu ubicación.");
             }, {
                 enableHighAccuracy: true,
                 maximumAge: 10000,
                 timeout: 10000
             });
         } else {
-            alert("La geolocalización no es soportada por tu navegador.");
+            // alert("La geolocalización no es soportada por tu navegador.");
         }
 
     },
@@ -376,6 +372,12 @@ function initSearch() {
                     const lon = parseFloat(item.lon);
 
                     // Pasar la direccion aqui
+                    const coords = {
+                        lat: lat,
+                        lon: lon
+                    };
+
+                    window.dotnetHelper.invokeMethodAsync('destinationCoords', JSON.stringify(coords));
 
                     window.mapApp.map.setView([lat, lon], 15);
                     L.marker([lat, lon]).addTo(window.mapApp.map)
@@ -390,7 +392,7 @@ function initSearch() {
 
         } catch (err) {
             // console.error("Error en la búsqueda:", err);
-            alert("Ocurrió un error al buscar.");
+            // alert("Ocurrió un error al buscar.");
         }
     });
 }

@@ -1,3 +1,114 @@
 @page "/information"
 
 <PageTitle>Información</PageTitle>
+
+@* <div class="card mt-3 shadow">
+    <div class="card-header text-center" 
+        style="background: linear-gradient(to right, #2ecc71, #ffffff); color: #2c3e50;">
+        <h4 style="font-weight: bold;">¿Qué es MiRuta?</h4>
+    </div>
+    <div class="card-body" style="background-color: #f9f9f9; color: #333; font-size: 1.1rem; line-height: 1.6;">
+        <p>
+        <strong>MiRuta</strong> es un proyecto diseñado para los ciudadanos de Guatemala que utilizan el transporte público, 
+        con el objetivo de mejorar su experiencia de viaje y facilitarles llegar a su destino de la manera más sencilla y eficiente posible.
+        </p>
+    </div>
+</div> *@
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parallaxx-js/dist/parallax.css"/>
+</head>
+
+<body>
+    <div class="parallax" data-speed="0.5" data-image="Transmetro.jpg">
+        <div class="position-absolute"
+            style="
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.637);
+            ">
+        </div>
+
+        <div class="position-relative p-5">
+            <h1 class="mb-4 mt-2 fw-bold">¿Que es MiRuta?</h1>
+            <span class="text-whitefw-bold">Un proyecto diseñado para los ciudadanos de Guatemala que utilizan el 
+            transporte público, con el objetivo de mejorar su experiencia de viaje y facilitarles llegar a su destino de la 
+            manera más sencilla y eficiente posible.</span>
+        </div>
+    </div>
+
+    @*  *@
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Service Card 1 -->
+            <div class="col-md-4">
+                <div class="service-card hover-lift">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-bullseye" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0-1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+                                    <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10z"/>
+                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                </svg>
+                            </div>
+                            <h3 class="h4 mb-2 text-center">Propósito del proyecto</h3>
+                        </div>
+                        <div class="service-card-back text-center">
+                            <p>MiRuta nace con la visión de transformar la forma en que los guatemaltecos se mueven por la ciudad, haciendo del transporte público una opción más accesible, confiable y eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="col-md-4">
+                <div class="service-card hover-lift">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                                    <path d="M7.938 2.016a.13.13 0 0 1 .125 0l6.857 11.856c.03.053.03.117 0 .17a.13.13 0 0 1-.125.063H1.205a.13.13 0 0 1-.125-.063.146.146 0 0 1 0-.17L7.938 2.016zm.834-.482a1.13 1.13 0 0 0-1.544 0L.371 13.39c-.457.59-.013 1.61.772 1.61h13.714c.785 0 1.229-1.02.772-1.61L8.772 1.534z"/>
+                                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm.93-4.481a.5.5 0 0 1 .992 0l-.35 3.5a.5.5 0 0 1-.992 0l-.35-3.5z"/>
+                                </svg>
+                            </div>
+                            <h3 class="h4 mb-2 text-center">Problema que resuelve</h3>
+                        </div>
+                        <div class="service-card-back text-center">
+                            <p>En muchas ocasiones, movilizarse en transporte público puede ser confuso o poco predecible. MiRuta busca resolver este problema ofreciendo información clara y en tiempo real sobre rutas, horarios y conexiones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="col-md-4">
+                <div class="service-card hover-lift">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M10.97 5.97a.75.75 0 0 1 1.07 1.05L7.477 11.534a.75.75 0 0 1-1.08.02L4.324 9.384a.75.75 0 1 1 1.06-1.06l1.647 1.646 3.939-3.939z"/>
+                                </svg>
+                            </div>
+                            <h3 class="h4 mb-2 text-center">Beneficio directo para el usuario</h3>
+                        </div>
+                        <div class="service-card-back text-center">
+                            <p>Con MiRuta, los usuarios pueden planificar sus trayectos con anticipación, ahorrar tiempo y evitar contratiempos, mejorando su día a día.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*  *@
+
+    @* <section class="100vh" style="min-height: 100vh"></section>  *@
+    <script src="https://cdn.jsdelivr.net/npm/parallaxx-js/dist/parallax.js"></script>
+</body>

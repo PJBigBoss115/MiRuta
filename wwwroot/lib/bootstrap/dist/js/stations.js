@@ -105,9 +105,9 @@ const lineas = {
     "Linea_18": [
         { nombre: "PARAÍSO", coords: [14.665774307316655, -90.44667566172043] },
         { nombre: "SAN RAFAEL", coords: [14.660447958905191, -90.45206556180254] },
-        { nombre: "ATLÁNTIDA - SAN RAFAEL - PARAÍSO", coords: [14.651074087938827, -90.47799194591052]},
+        { nombre: "ATLÁNTIDA - SAN RAFAEL - PARAÍSO", coords: [14.651074087938827, -90.47799194591052] },
         { nombre: "ATLÁNTIDA", coords: [14.651076543076794, -90.47798846498144] },
-        { nombre: "PORTALES", coords: [14.648742937266203, -90.48198681406106]},
+        { nombre: "PORTALES", coords: [14.648742937266203, -90.48198681406106] },
         { nombre: "VICTORIAS", coords: [14.648455075747801, -90.493441262726] },
         { nombre: "SAN MÁRTIN - DIR. ATLÁNTIDA", coords: [14.645451667850791, -90.49676851108204] },
         { nombre: "COLÓN", coords: [14.640102363776897, -90.50820470430158] }, // Comparte con Linea 6
