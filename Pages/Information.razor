@@ -2,18 +2,75 @@
 
 <PageTitle>Información</PageTitle>
 
-@* <div class="card mt-3 shadow">
-    <div class="card-header text-center" 
-        style="background: linear-gradient(to right, #2ecc71, #ffffff); color: #2c3e50;">
-        <h4 style="font-weight: bold;">¿Qué es MiRuta?</h4>
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Rutas disponibles</h2>
+        <div class="row g-4">
+
+            <!-- Transmetro -->
+            <div class="col-md-6">
+                <div class="card shadow-sm rounded">
+                    <!-- Card header con gradiente -->
+                    <div class="card-header text-white d-flex align-items-center" style="background: linear-gradient(135deg, #007bff, #00aaff);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-bus-front me-2" viewBox="0 0 16 16">
+                            <path d="M5 14s-1 0-1-1 1-4 1-4h6s1 3 1 4-1 1-1 1H5z"/>
+                            <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v11.5a1.5 1.5 0 0 0 3 0V2a2 2 0 0 0-1-2zm8 0a2 2 0 0 1 2 2v11.5a1.5 1.5 0 0 1-3 0V2a2 2 0 0 1 1-2z"/>
+                        </svg>
+                        <h3 class="m-0">Transmetro</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Tienes 7 líneas disponibles para recorrer la ciudad de manera rápida y segura:</p>
+                        <div class="row">
+                            <div class="col-12 col-md-6 d-flex flex-column gap-3">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <div class="route-circle" style="background-color:#FF6B6B;">1</div>
+                                    <span>Ruta 1 - Zona Central</span>
+                                </div>
+
+                                
+                                <div class="route-circle" style="background-color:#FFB86B;">2</div>
+                                <div class="route-circle" style="background-color:#FFD93D;">6</div>
+                                <div class="route-circle" style="background-color:#6BCB77;">7</div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex flex-column gap-3">
+                                <div class="route-circle" style="background-color:#4D96FF;">12</div>
+                                <div class="route-circle" style="background-color:#845EC2;">13</div>
+                                <div class="route-circle" style="background-color:#FF6F91;">18</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TuBus -->
+            <div class="col-md-6">
+                <div class="card shadow-sm rounded">
+                    <!-- Card header con gradiente -->
+                    <div class="card-header text-white d-flex align-items-center" style="background: linear-gradient(135deg, #28a745, #5cd65c);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-bus-front-fill me-2" viewBox="0 0 16 16">
+                            <path d="M4 1a1 1 0 0 0-1 1v11.5a1.5 1.5 0 0 0 3 0V2a1 1 0 0 0-1-1zm8 0a1 1 0 0 1 1 1v11.5a1.5 1.5 0 0 1-3 0V2a1 1 0 0 1 1-1z"/>
+                            <path d="M0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3H0V8z"/>
+                        </svg>
+                        <h3 class="m-0">TuBus</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Y 3 Rutas estratégicas para cubrir distintas zonas de la ciudad:</p>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="route-circle" style="background-color: yellow;">104</div>
+                            <div class="route-circle" style="background-color: blue;">801</div>
+                            <div class="route-circle" style="background-color: blue;">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="card-body" style="background-color: #f9f9f9; color: #333; font-size: 1.1rem; line-height: 1.6;">
-        <p>
-        <strong>MiRuta</strong> es un proyecto diseñado para los ciudadanos de Guatemala que utilizan el transporte público, 
-        con el objetivo de mejorar su experiencia de viaje y facilitarles llegar a su destino de la manera más sencilla y eficiente posible.
-        </p>
-    </div>
-</div> *@
+</section>
+
+
+
+
 
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parallaxx-js/dist/parallax.css"/>
@@ -39,7 +96,6 @@
         </div>
     </div>
 
-    @*  *@
     <div class="container py-5">
         <div class="row g-4">
             <!-- Service Card 1 -->
@@ -107,8 +163,75 @@
             </div>
         </div>
     </div>
-    @*  *@
 
-    @* <section class="100vh" style="min-height: 100vh"></section>  *@
+    <section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Características principales</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="feature-card p-3 border rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-map" viewBox="0 0 16 16">
+                        <path d="M15.817.113A.5.5 0 0 0 15.5 0a.495.495 0 0 0-.156.026L10 2.5 5 0 .156 2.474A.5.5 0 0 0 0 2.94v12.947a.5.5 0 0 0 .683.474L5 14l5 2.5 4.844-2.474A.5.5 0 0 0 15.999 14V1.053a.5.5 0 0 0-.182-.94zM10 3.5v12l-5-2.5v-12l5 2.5z"/>
+                    </svg>
+                    <h5 class="mt-2">Mapas interactivos</h5>
+                    <p>Visualiza todas las rutas disponibles con paradas, conexiones y recorridos actualizados.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card p-3 border rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-clock-history" viewBox="0 0 16 16">
+                        <path d="M8.515 3.5a.5.5 0 0 1 .5.5V8h3.5a.5.5 0 0 1 0 1H8a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M8 1a7 7 0 1 0 7 7A7 7 0 0 0 8 1zM8 0a8 8 0 1 1-8 8A8 8 0 0 1 8 0z"/>
+                    </svg>
+                    <h5 class="mt-2">Horarios en tiempo real</h5>
+                    <p>Consulta los horarios actualizados y el estado de las unidades en circulación.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card p-3 border rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path d="M8 10a3 3 0 1 0-6 0 3 3 0 0 0 6 0z"/>
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H10V8h4.5a.5.5 0 0 1 .5.5zM15 10a.5.5 0 0 1-.5.5H10v-.5h5zM15 12a.5.5 0 0 1-.5.5H10v-.5h5zM15 14a.5.5 0 0 1-.5.5H10v-.5h5z"/>
+                    </svg>
+                    <h5 class="mt-2">Perfil personalizado</h5>
+                    <p>Guarda tus rutas frecuentes, preferencias y alertas de transporte en tu cuenta.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card p-3 border rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-chat-dots" viewBox="0 0 16 16">
+                        <path d="M2 2a2 2 0 0 0-2 2v9.586l2-2A2 2 0 0 1 3.414 11H14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                        <path d="M5 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg>
+                    <h5 class="mt-2">Comunidad de usuarios</h5>
+                    <p>Comparte comentarios y reportes sobre el servicio en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-4">Nuestra misión y visión</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h4>Misión</h4>
+                <p>Facilitar el acceso a información del transporte público en Guatemala, mejorando la movilidad urbana y la calidad de vida de los ciudadanos.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Visión</h4>
+                <p>Ser la plataforma líder en gestión de movilidad urbana, promoviendo un transporte más eficiente, seguro y sostenible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/parallaxx-js/dist/parallax.js"></script>
 </body>

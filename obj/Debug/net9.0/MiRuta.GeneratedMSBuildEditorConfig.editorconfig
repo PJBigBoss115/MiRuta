@@ -40,10 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/Information.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mb3JtYXRpb24ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/MapHome.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -71,3 +67,7 @@ build_metadata.AdditionalFiles.CssScope = b-g7b9wzjkqj
 [C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1cp4c4p48h
+
+[C:/Users/pedro.aguilar/Documents/GitHub/MiRuta/Pages/Information.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mb3JtYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-neqj43fkwr

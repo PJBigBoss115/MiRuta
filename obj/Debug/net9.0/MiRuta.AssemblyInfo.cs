@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiRuta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ec07d348c50513313d6e2c9d9372585e51af47e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2963bfbc0f9fbaaa2385cf720b13a43263482f26")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiRuta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiRuta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
