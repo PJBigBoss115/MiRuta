@@ -2,236 +2,383 @@
 
 <PageTitle>Información</PageTitle>
 
-<section class="py-5 bg-light">
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Sistema de Transporte Urbano</h1>
+                <p class="lead mb-4">Movilidad eficiente, segura y accesible para todos los ciudadanos</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-clock me-1"></i> Horarios Extendidos</span>
+                    <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-geo-alt me-1"></i> Cobertura Total</span>
+                    <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-shield-check me-1"></i> Viaje Seguro</span>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="bi bi-bus-front display-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light" id="rutas">
     <div class="container">
         <h2 class="text-center fw-bold mb-5">Rutas disponibles</h2>
         <div class="row g-4">
 
             <!-- Transmetro -->
-            <div class="col-md-6">
-                <div class="card shadow-sm rounded">
-                    <!-- Card header con gradiente -->
+            <div class="col-md-6 d-flex">
+                <div class="card shadow-sm rounded h-100 w-100">
                     <div class="card-header text-white d-flex align-items-center" style="background: linear-gradient(135deg, #007bff, #00aaff);">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-bus-front me-2" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bus-front me-2" viewBox="0 0 16 16">
                             <path d="M5 14s-1 0-1-1 1-4 1-4h6s1 3 1 4-1 1-1 1H5z"/>
                             <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v11.5a1.5 1.5 0 0 0 3 0V2a2 2 0 0 0-1-2zm8 0a2 2 0 0 1 2 2v11.5a1.5 1.5 0 0 1-3 0V2a2 2 0 0 1 1-2z"/>
                         </svg>
-                        <h3 class="m-0">Transmetro</h3>
+                        <h3 class="m-0 fw-bold">TransMetro</h3>
                     </div>
-                    <div class="card-body">
-                        <p>Tienes 7 líneas disponibles para recorrer la ciudad de manera rápida y segura:</p>
-                        <div class="row">
-                            <div class="col-12 col-md-6 d-flex flex-column gap-3">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <div class="route-circle" style="background-color:#FF6B6B;">1</div>
-                                    <span>Ruta 1 - Zona Central</span>
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-3">
+                            <strong>Tienes 7 líneas disponibles para recorrer la ciudad de manera rápida y segura:</strong>
+                        </p>
+                        <div class="row flex-grow-1">
+                            <div class="col-12 col-md-6">
+                                <div class="route-item d-flex align-items-start gap-3">
+                                    <div class="route-circle" style="background-color: purple;">1</div>
+                                    <div class="route-info">
+                                        <div class="route-name">SAN SEBASTIÁN Z.1/CENTRO CÍVICO Z.1</div>
+                                    </div>
                                 </div>
-
-                                
-                                <div class="route-circle" style="background-color:#FFB86B;">2</div>
-                                <div class="route-circle" style="background-color:#FFD93D;">6</div>
-                                <div class="route-circle" style="background-color:#6BCB77;">7</div>
+                                <div class="route-item d-flex align-items-start gap-3">
+                                    <div class="route-circle" style="background-color: skyblue;">2</div>
+                                    <div class="route-info">
+                                        <div class="route-name">HIPÓDROMO DEL NORTE Z.2/SAN SEBASTIÁN Z.1</div>
+                                    </div>
+                                </div>
+                                <div class="route-item d-flex align-items-start gap-3">
+                                    <div class="route-circle text-dark" style="background-color: yellow;">6</div>
+                                    <div class="route-info">
+                                        <div class="route-name">PROYECTOS Z.6/FEGUA Z.1</div>
+                                    </div>
+                                </div>
+                                <div class="route-item d-flex align-items-start gap-3">
+                                    <div class="route-circle" style="background-color: green;">7</div>
+                                    <div class="route-info">
+                                        <div class="route-name">USAC PERIFÉRICO Z.12/LA MERCED Z.1</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-12 col-md-6 d-flex flex-column gap-3">
-                                <div class="route-circle" style="background-color:#4D96FF;">12</div>
-                                <div class="route-circle" style="background-color:#845EC2;">13</div>
-                                <div class="route-circle" style="background-color:#FF6F91;">18</div>
+                            <div class="col-12 col-md-6">
+                                <div class="route-item d-flex align-items-start gap-3">
+                                    <div class="route-circle" style="background-color: red;">12</div>
+                                    <div class="route-info">
+                                        <div class="route-name">CENTRO SUR/PLAZA BARRIOS Z.1</div>
+                                    </div>
+                                </div>
+                                <div class="route-item d-flex align-items-start gap-3">
+                                    <div class="route-circle" style="background-color: black;">13</div>
+                                    <div class="route-info">
+                                        <div class="route-name">PLAZA ARGENTINA Z.13/TIPOGRAFÍA Z.1</div>
+                                    </div>
+                                </div>
+                                <div class="route-item d-flex align-items-start gap-3">
+                                    <div class="route-circle" style="background-color: blue;">18</div>
+                                    <div class="route-info">
+                                        <div class="route-name">ATLÁNTIDA Z.18/FEGUA Z.1</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- TuBus -->
-            <div class="col-md-6">
-                <div class="card shadow-sm rounded">
-                    <!-- Card header con gradiente -->
+            <div class="col-md-6 d-flex">
+                <div class="card shadow-sm rounded h-100 w-100">
                     <div class="card-header text-white d-flex align-items-center" style="background: linear-gradient(135deg, #28a745, #5cd65c);">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-bus-front-fill me-2" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bus-front-fill me-2" viewBox="0 0 16 16">
                             <path d="M4 1a1 1 0 0 0-1 1v11.5a1.5 1.5 0 0 0 3 0V2a1 1 0 0 0-1-1zm8 0a1 1 0 0 1 1 1v11.5a1.5 1.5 0 0 1-3 0V2a1 1 0 0 1 1-1z"/>
                             <path d="M0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3H0V8z"/>
                         </svg>
-                        <h3 class="m-0">TuBus</h3>
+                        <h3 class="m-0 fw-bold">TuBus</h3>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-3">
+                            <strong>Una ruta adicional para movilizarte en la ciudad:</strong>
+                        </p>
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <div class="route-item d-flex align-items-start gap-3 w-100">
+                                <div class="route-circle text-white" style="background-color: blue;">5</div>
+                                <div class="route-info">
+                                    <div class="route-name">PARQUE COLÓN Z.1/PUENTE DE LA PENITENCIARIA Z.4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="horarios">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Horarios de Rutas</h2>
+        
+        <div class="tab-content" id="scheduleTabContent">
+            <div class="tab-pane fade show active" id="transmetro" role="tabpanel">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover schedule-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ruta</th>
+                                        <th>Lunes a Viernes</th>
+                                        <th>Sabádos</th>
+                                        <th>Domingo y Días Festivos</th>
+                                        <th>Frecuencia</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="route-circle small-circle" style="background-color: purple;">1</span> Ruta 1</td>
+                                        <td>05:00 AM - 08:00 PM</td>
+                                        <td>05:00 AM - 07:00 PM</td>
+                                        <td>06:30 AM - 07:00 PM</td>
+                                        <td>5-7 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="route-circle small-circle" style="background-color: skyblue;">2</span> Ruta 2</td>
+                                        <td>05:30 AM - 08:00 PM</td>
+                                        <td>05:30 AM - 07:00 PM</td>
+                                        <td>06:30 AM - 07:00 PM</td>
+                                        <td>6-8 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="route-circle small-circle text-dark" style="background-color: yellow;">6</span> Ruta 6</td>
+                                        <td>05:00 AM - 09:00 PM</td>
+                                        <td>05:00 AM - 08:00 PM</td>
+                                        <td>06:00 AM - 08:00 PM</td>
+                                        <td>7-10 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="route-circle small-circle" style="background-color: green;">7</span> Ruta 7</td>
+                                        <td>05:00 AM - 09:00 PM</td>
+                                        <td>05:00 AM - 08:00 PM</td>
+                                        <td>06:00 AM - 08:00 PM</td>
+                                        <td>8-12 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="route-circle small-circle" style="background-color: red;">12</span> Ruta 12</td>
+                                        <td>04:30 AM - 09:00 PM</td>
+                                        <td>04:30 AM - 09:00 PM</td>
+                                        <td>04:30 AM - 09:00 PM</td>
+                                        <td>10-15 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="route-circle small-circle" style="background-color: black;">13</span> Ruta 13</td>
+                                        <td>05:00 AM - 09:00 PM</td>
+                                        <td>05:00 AM - 08:00 PM</td>
+                                        <td>05:00 AM - 08:00 PM</td>
+                                        <td>12-15 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="route-circle small-circle" style="background-color: blue;">18</span> Ruta 18</td>
+                                        <td>05:00 AM - 09:00 PM</td>
+                                        <td>05:00 AM - 08:00 PM</td>
+                                        <td>06:00 AM - 08:00 PM</td>
+                                        <td>15-20 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="route-circle small-circle" style="background-color: blue;">5</span> Ruta 5</td>
+                                        <td>05:30 AM - 07:00 PM</td>
+                                        <td>05:30 AM - 07:00 PM</td>
+                                        <td>06:00 AM - 06:00 PM</td>
+                                        <td>10-15 min</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-info mt-4" role="alert">
+            <i class="bi bi-info-circle me-2"></i>
+            <strong>Nota:</strong> Los horarios pueden variar en días festivos. Consulte los canales oficial para información en tiempo real.
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light" id="reglas">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Reglas y Normativas</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h4 class="m-0"><i class="bi bi-exclamation-triangle me-2"></i>Normas de Conducta</h4>
                     </div>
                     <div class="card-body">
-                        <p>Y 3 Rutas estratégicas para cubrir distintas zonas de la ciudad:</p>
-                        <div class="d-flex flex-column gap-3">
-                            <div class="route-circle" style="background-color: yellow;">104</div>
-                            <div class="route-circle" style="background-color: blue;">801</div>
-                            <div class="route-circle" style="background-color: blue;">5</div>
+                        <div class="rule-item">
+                            <h5><i class="bi bi-1-circle text-primary me-2"></i>Comportamiento</h5>
+                            <p class="mb-0">Mantenga un comportamiento respetuoso con otros pasajeros y el personal del transporte.</p>
+                        </div>
+                        <div class="rule-item">
+                            <h5><i class="bi bi-2-circle text-primary me-2"></i>Prioridad de Asientos</h5>
+                            <p class="mb-0">Ceda los asientos prioritarios a adultos mayores, embarazadas y personas con discapacidad.</p>
+                        </div>
+                        <div class="rule-item">
+                            <h5><i class="bi bi-3-circle text-primary me-2"></i>Uso de Mascarillas</h5>
+                            <p class="mb-0">Utilice mascarilla en caso de síntomas respiratorios para proteger a otros pasajeros.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-danger text-white">
+                        <h4 class="m-0"><i class="bi bi-x-circle me-2"></i>Prohibiciones</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="rule-item">
+                            <h5><i class="bi bi-ban text-danger me-2"></i>Alimentos y Bebidas</h5>
+                            <p class="mb-0">No consumir alimentos ni bebidas dentro de las unidades de transporte.</p>
+                        </div>
+                        <div class="rule-item">
+                            <h5><i class="bi bi-ban text-danger me-2"></i>Límite de equipaje</h5>
+                            <p class="mb-0">Solo se permiten maletas de 25x40x60 cm. Los domingos no aplica esta restricción.</p>
+                        </div>
+                        <div class="rule-item">
+                            <h5><i class="bi bi-ban text-danger me-2"></i>Fumar/Vapear</h5>
+                            <p class="mb-0">Estrictamente prohibido fumar o vapear en las unidades y paradas.</p>
+                        </div>
+                        <div class="rule-item">
+                            <h5><i class="bi bi-ban text-danger me-2"></i>Animales</h5>
+                            <p class="mb-0">No se permiten animales, excepto perros guía debidamente identificados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-
-
-
-
-<head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parallaxx-js/dist/parallax.css"/>
-</head>
-
-<body>
-    <div class="parallax" data-speed="0.5" data-image="Transmetro.jpg">
-        <div class="position-absolute"
-            style="
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: rgba(0, 0, 0, 0.637);
-            ">
-        </div>
-
-        <div class="position-relative p-5">
-            <h1 class="mb-4 mt-2 fw-bold">¿Que es MiRuta?</h1>
-            <span class="text-whitefw-bold">Un proyecto diseñado para los ciudadanos de Guatemala que utilizan el 
-            transporte público, con el objetivo de mejorar su experiencia de viaje y facilitarles llegar a su destino de la 
-            manera más sencilla y eficiente posible.</span>
-        </div>
-    </div>
-
-    <div class="container py-5">
+<section class="py-5" id="tarifas">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Tarifas y Métodos de Pago</h2>
+        
         <div class="row g-4">
-            <!-- Service Card 1 -->
             <div class="col-md-4">
-                <div class="service-card hover-lift">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                    class="bi bi-bullseye" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0-1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
-                                    <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10z"/>
-                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                                </svg>
-                            </div>
-                            <h3 class="h4 mb-2 text-center">Propósito del proyecto</h3>
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="feature-icon bg-primary text-white mx-auto">
+                            <i class="bi bi-credit-card"></i>
                         </div>
-                        <div class="service-card-back text-center">
-                            <p>MiRuta nace con la visión de transformar la forma en que los guatemaltecos se mueven por la ciudad, haciendo del transporte público una opción más accesible, confiable y eficiente.</p>
+                        <h4>Tarjeta Recargable</h4>
+                        <p>Adquiere tu tarjeta en estaciones autorizadas y recárgala según tus necesidades.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary fs-6">Costo: Q5.00</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Service Card 2 -->
+            
             <div class="col-md-4">
-                <div class="service-card hover-lift">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                    class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-                                    <path d="M7.938 2.016a.13.13 0 0 1 .125 0l6.857 11.856c.03.053.03.117 0 .17a.13.13 0 0 1-.125.063H1.205a.13.13 0 0 1-.125-.063.146.146 0 0 1 0-.17L7.938 2.016zm.834-.482a1.13 1.13 0 0 0-1.544 0L.371 13.39c-.457.59-.013 1.61.772 1.61h13.714c.785 0 1.229-1.02.772-1.61L8.772 1.534z"/>
-                                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm.93-4.481a.5.5 0 0 1 .992 0l-.35 3.5a.5.5 0 0 1-.992 0l-.35-3.5z"/>
-                                </svg>
-                            </div>
-                            <h3 class="h4 mb-2 text-center">Problema que resuelve</h3>
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="feature-icon bg-success text-white mx-auto">
+                            <i class="bi bi-cash"></i>
                         </div>
-                        <div class="service-card-back text-center">
-                            <p>En muchas ocasiones, movilizarse en transporte público puede ser confuso o poco predecible. MiRuta busca resolver este problema ofreciendo información clara y en tiempo real sobre rutas, horarios y conexiones.</p>
+                        <h4>Tarifa Regular</h4>
+                        <p>Pago por viaje con tarjeta recargable. Aplicable a todos los usuarios.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-success fs-6">Q1.00 por viaje</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Service Card 3 -->
+            
             <div class="col-md-4">
-                <div class="service-card hover-lift">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                    class="bi bi-check-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M10.97 5.97a.75.75 0 0 1 1.07 1.05L7.477 11.534a.75.75 0 0 1-1.08.02L4.324 9.384a.75.75 0 1 1 1.06-1.06l1.647 1.646 3.939-3.939z"/>
-                                </svg>
-                            </div>
-                            <h3 class="h4 mb-2 text-center">Beneficio directo para el usuario</h3>
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="feature-icon bg-info text-white mx-auto">
+                            <i class="bi bi-person-hearts"></i>
                         </div>
-                        <div class="service-card-back text-center">
-                            <p>Con MiRuta, los usuarios pueden planificar sus trayectos con anticipación, ahorrar tiempo y evitar contratiempos, mejorando su día a día.</p>
+                        <h4>Tarifas Preferenciales</h4>
+                        <p>Descuentos para adultos mayores, estudiantes y personas con discapacidad.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-info fs-6">50% de descuento</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="bg-light py-5">
-    <div class="container">
-        <h2 class="text-center mb-4 fw-bold">Características principales</h2>
-        <div class="row g-4 text-center">
-            <div class="col-md-3">
-                <div class="feature-card p-3 border rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                        class="bi bi-map" viewBox="0 0 16 16">
-                        <path d="M15.817.113A.5.5 0 0 0 15.5 0a.495.495 0 0 0-.156.026L10 2.5 5 0 .156 2.474A.5.5 0 0 0 0 2.94v12.947a.5.5 0 0 0 .683.474L5 14l5 2.5 4.844-2.474A.5.5 0 0 0 15.999 14V1.053a.5.5 0 0 0-.182-.94zM10 3.5v12l-5-2.5v-12l5 2.5z"/>
-                    </svg>
-                    <h5 class="mt-2">Mapas interactivos</h5>
-                    <p>Visualiza todas las rutas disponibles con paradas, conexiones y recorridos actualizados.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card p-3 border rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                        class="bi bi-clock-history" viewBox="0 0 16 16">
-                        <path d="M8.515 3.5a.5.5 0 0 1 .5.5V8h3.5a.5.5 0 0 1 0 1H8a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M8 1a7 7 0 1 0 7 7A7 7 0 0 0 8 1zM8 0a8 8 0 1 1-8 8A8 8 0 0 1 8 0z"/>
-                    </svg>
-                    <h5 class="mt-2">Horarios en tiempo real</h5>
-                    <p>Consulta los horarios actualizados y el estado de las unidades en circulación.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card p-3 border rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                        class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                        <path d="M8 10a3 3 0 1 0-6 0 3 3 0 0 0 6 0z"/>
-                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H10V8h4.5a.5.5 0 0 1 .5.5zM15 10a.5.5 0 0 1-.5.5H10v-.5h5zM15 12a.5.5 0 0 1-.5.5H10v-.5h5zM15 14a.5.5 0 0 1-.5.5H10v-.5h5z"/>
-                    </svg>
-                    <h5 class="mt-2">Perfil personalizado</h5>
-                    <p>Guarda tus rutas frecuentes, preferencias y alertas de transporte en tu cuenta.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card p-3 border rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                        class="bi bi-chat-dots" viewBox="0 0 16 16">
-                        <path d="M2 2a2 2 0 0 0-2 2v9.586l2-2A2 2 0 0 1 3.414 11H14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
-                        <path d="M5 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                    </svg>
-                    <h5 class="mt-2">Comunidad de usuarios</h5>
-                    <p>Comparte comentarios y reportes sobre el servicio en tiempo real.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-5 bg-dark text-white text-center">
+<section class="py-5 bg-light" id="contacto">
     <div class="container">
-        <h2 class="fw-bold mb-4">Nuestra misión y visión</h2>
+        <h2 class="text-center fw-bold mb-5">Contacto y Soporte</h2>
+        
         <div class="row g-4">
             <div class="col-md-6">
-                <h4>Misión</h4>
-                <p>Facilitar el acceso a información del transporte público en Guatemala, mejorando la movilidad urbana y la calidad de vida de los ciudadanos.</p>
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="m-0"><i class="bi bi-telephone me-2"></i>Canales de Atención</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled contact-info">
+                            <li>
+                                <strong><i class="bi bi-telephone-fill text-primary me-2"></i>Línea de Atención:</strong>
+                                <div>1551</div>
+                            </li>
+                            <li>
+                                <strong><i class="bi bi-whatsapp text-success me-2"></i>WhatsApp:</strong>
+                                <div>2285-8000</div>
+                            </li>
+                            <li>
+                                <strong><i class="bi bi-envelope text-danger me-2"></i>Correo Electrónico:</strong>
+                                <div>www.webmail.muniguate.com/</div>
+                            </li>
+                            <li>
+                                <strong><i class="bi bi-globe text-info me-2"></i>Sitio Web:</strong>
+                                <div>www.muniguate.com/movilidadurbana/transmetro</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
             <div class="col-md-6">
-                <h4>Visión</h4>
-                <p>Ser la plataforma líder en gestión de movilidad urbana, promoviendo un transporte más eficiente, seguro y sostenible.</p>
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="m-0"><i class="bi bi-clock me-2"></i>Horarios de Atención</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled contact-info">
+                            <li>
+                                <strong>Lunes a Viernes:</strong>
+                                <div>7:00 AM - 7:00 PM</div>
+                            </li>
+                            <li>
+                                <strong>Sábados:</strong>
+                                <div>8:00 AM - 12:00 PM</div>
+                            </li>
+                            <li>
+                                <strong>Domingos y Festivos:</strong>
+                                <div>Cerrado</div>
+                            </li>
+                            <li>
+                                <strong>Atención de Emergencias:</strong>
+                                <div>24/7 por teléfono</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/parallaxx-js/dist/parallax.js"></script>
-</body>

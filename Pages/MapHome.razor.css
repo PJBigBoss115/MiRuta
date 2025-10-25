@@ -1,0 +1,135 @@
+.map-section {
+    background: linear-gradient(to bottom, #f8fdf8 0%, #ffffff 100%);
+    padding: 1.5rem 0;
+}
+
+.map-container {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(38, 176, 80, 0.1);
+    border: 1px solid #e8f5e8;
+}
+
+.map-header {
+    padding: 0 0.5rem;
+}
+
+.full-map {
+    height: 65vh;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid #e8f5e8;
+    transition: all 0.3s ease;
+}
+
+.full-map:hover {
+    box-shadow: 0 6px 25px rgba(38, 176, 80, 0.2);
+    border-color: #26b050;
+}
+
+.action-section {
+    margin-top: 1.5rem;
+}
+
+.route-button {
+    background: linear-gradient(135deg, #26b050 0%, #1e7b34 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(38, 176, 80, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.route-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(38, 176, 80, 0.4);
+    background: linear-gradient(135deg, #2ed45e 0%, #26b050 100%);
+}
+
+.route-button:active {
+    transform: translateY(-1px);
+}
+
+.route-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.route-button:hover::before {
+    left: 100%;
+}
+
+/* Efectos de carga para el mapa */
+.full-map.loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .map-container {
+        padding: 1rem;
+        border-radius: 10px;
+        margin: 0 0.5rem;
+    }
+    
+    .full-map {
+        height: 50vh;
+        border-radius: 8px;
+    }
+    
+    .route-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .map-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* Estados del botón */
+.route-button:disabled {
+    background: #6c757d;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.route-button:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mejora visual para el contenedor principal */
+.map-section .row {
+    margin: 0;
+}
+
+.map-section .col-12 {
+    padding: 0 0.75rem;
+}

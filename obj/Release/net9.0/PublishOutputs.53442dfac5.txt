@@ -1,0 +1,1 @@
+/home/pedro/MiRuta/publish/web.config

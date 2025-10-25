@@ -1,3 +1,216 @@
 @page "/news"
 
 <PageTitle>Noticias</PageTitle>
+
+<section class="news-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-60">
+            <div class="col-lg-8 mx-auto text-center text-white">
+                <h1 class="display-4 fw-bold mb-4">Noticias y Actualizaciones</h1>
+                <p class="lead mb-4 fs-5">Mantente informado sobre las últimas novedades en la Ciudad de Guatemala</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-newspaper me-1"></i>Noticias</span>
+                    <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-play-btn me-1"></i>Videos</span>
+                    <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-megaphone me-1"></i>Anuncios</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filtros de Contenido -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="d-flex flex-wrap justify-content-center gap-2" id="newsFilters">
+                    <button class="btn btn-outline-primary active filter-btn" data-filter="all">
+                        <i class="bi bi-grid me-2"></i>Todos
+                    </button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="video">
+                        <i class="bi bi-play-circle me-2"></i>Videos
+                    </button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="facebook">
+                        <i class="bi bi-facebook me-2"></i>Facebook
+                    </button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="x">
+                        <i class="bi bi-x me-2"></i>X
+                    </button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="news">
+                        <i class="bi bi-newspaper me-2"></i>Noticias
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Grid de Noticias -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4" id="newsGrid">
+            
+            <div class="col-lg-6 news-item" data-type="video">
+                <div class="card news-card shadow-sm h-100">
+                    <div class="card-header bg-danger text-white d-flex align-items-center">
+                        <i class="bi bi-youtube me-2"></i>
+                        <span class="fw-bold">Video</span>
+                        <span class="badge bg-light text-dark ms-auto">Hace 1 año</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="embed-container">
+                            <iframe src="https://www.youtube.com/embed/GSP3C00DPNc?si=uV_o7S-zdNBMfMQG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="fw-bold">Te presentamos a nuestros jóvenes ganadores del concurso ambiental Acciones Verdes 🌿</h5>
+                        <p class="text-muted mb-2">Cada uno de los proyectos beneficiarán a la acción climática en nuestra ciudad 🌳🌳🌳</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-eye me-1"></i>259 visualizaciones</small>
+                            <small class="text-muted"><i class="bi bi-calendar me-1"></i>13 sept 2024</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 news-item" data-type="facebook">
+                <div class="card news-card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white d-flex align-items-center">
+                        <i class="bi bi-facebook me-2"></i>
+                        <span class="fw-bold">Facebook</span>
+                        <span class="badge bg-light text-dark ms-auto">Hace 24 horas</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="embed-container">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmuniguate%2Fposts%2Fpfbid0zQ3tSZh1KD8p9R8qVqEfq8u3p9J2qzWoiqpxLu9B2Rsb6A8zFF1SQxhYNVA58Vbel&show_text=true&width=500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="fw-bold">Todo Sobre la Línea 6 del TransMetro</h5>
+                        <p class="text-muted mb-2">
+                            Desde FEGUA hasta Proyectos, la Línea 6 del TransMetro conecta la Zona 1 con la Zona 6, facilitando el traslado diario de miles de personas.🚌🗺️
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-hand-thumbs-up me-1"></i>+150 likes</small>
+                            <small class="text-muted"><i class="bi bi-calendar me-1"></i>24 Oct 2025</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 news-item" data-type="x">
+                <div class="card news-card shadow-sm h-100">
+                    <div class="card-header bg-dark text-white d-flex align-items-center">
+                        <i class="bi bi-twitter-x me-2"></i>
+                        <span class="fw-bold">X Post</span>
+                        <span class="badge bg-light text-dark ms-auto">Hace 3 días</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="embed-container text-center">
+                            <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Nuevo ministro de Gobernación anuncia reformas profundas al sistema penitenciario<a href="https://t.co/9IHnw90SOo">https://t.co/9IHnw90SOo</a></p>&mdash; Noti7 (@@Noti7Guatemala) <a href="https://twitter.com/Noti7Guatemala/status/1981950926664466772?ref_src=twsrc%5Etfw">October 25, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="fw-bold">Actualización en X</h5>
+                        <p class="text-muted mb-2">Información importante compartida en X.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-heart me-1"></i>89 likes</small>
+                            <small class="text-muted"><i class="bi bi-calendar me-1"></i>25 Oct 2025</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 news-item" data-type="news">
+                <div class="card news-card shadow-sm h-100">
+                    <div class="card-header bg-success text-white d-flex align-items-center">
+                        <i class="bi bi-newspaper me-2"></i>
+                        <span class="fw-bold">Noticia</span>
+                        <span class="badge bg-light text-dark ms-auto">Hoy</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="embed-container">
+                            <iframe src="https://www.prensalibre.com/vida/escenario/festival-del-dulce-tipico-antigueno-gastronomia-musica-y-tradicion-en-un-solo-lugar/" title="Noticia importante" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="fw-bold">Festival del dulce típico antigüeño: gastronomía, música y tradición en un solo lugar</h5>
+                        <p class="text-muted mb-2">El sabor guatemalteco se vivirá en el Festival del Dulce Típico Antigüeño, una actividad que resalta la tradición culinaria del país. Así será el evento y los puntos de visita.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-share me-1"></i>+10 shares</small>
+                            <small class="text-muted"><i class="bi bi-calendar me-1"></i>24 Oct 2025</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 news-item" data-type="video">
+                <div class="card news-card shadow-sm h-100">
+                    <div class="card-header bg-danger text-white d-flex align-items-center">
+                        <i class="bi bi-youtube me-2"></i>
+                        <span class="fw-bold">Video</span>
+                        <span class="badge bg-light text-dark ms-auto">Hace 1 mes</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="embed-container">
+                            <iframe src="https://www.youtube.com/embed/0QStkFZ-lYw?si=iV6ijHCU5yVj_JgN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="fw-bold">21k MuniGuate 2025</h5>
+                        <p class="text-muted mb-2">En cada kilómetro, una historia.
+                            La #21KMuniGuate terminó, pero la inspiración continúa. Gracias a todos los corredores que con pasión y energía recorrieron las calles de la ciudad en esta gran fiesta deportiva. 🏁
+                            #UnLugarQueInspira #ElMejorLugarParaVivir
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-eye me-1"></i>212 vistas</small>
+                            <small class="text-muted"><i class="bi bi-calendar me-1"></i>5 Sept 2025</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 news-item" data-type="facebook">
+                <div class="card news-card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white d-flex align-items-center">
+                        <i class="bi bi-facebook me-2"></i>
+                        <span class="fw-bold">Facebook</span>
+                        <span class="badge bg-light text-dark ms-auto">Hace 25 horas</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="embed-container">
+                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F824138743745675%2F&show_text=false&width=380&t=0" width="380" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="fw-bold">Publicación en Facebook</h5>
+                        <p class="text-muted mb-2">Este domingo se espera la visita  de más de 25,000 personas en el parque central. 
+                            ⚠️👇🏼 Aquí te contamos todo, para que tomes tus precauciones.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-chat me-1"></i>+5 comentarios</small>
+                            <small class="text-muted"><i class="bi bi-calendar me-1"></i>24 Oct 2025</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <h2 class="fw-bold mb-4">¿Tienes contenido para compartir?</h2>
+                <p class="fs-5 mb-4">Si tienes noticias, videos o información relevante sobre Guatemala, contáctanos para incluirlos en esta sección.</p>
+                <a href="mailto:pedro28aguilar@gmail.com?subject=Contacto%20desde%20MiRuta%20Guatemala" 
+                    target="_blank"
+                    class="btn btn-primary btn-lg px-4 py-2 fw-bold">
+                        Contactar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

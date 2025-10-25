@@ -7,29 +7,29 @@
 
 <PageTitle>Mapa</PageTitle>
 
-<style>
-    .full-map {
-        height: 70vh;
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-</style>
-
-<div>
+<div class="map-section">
     <SearchLayout />
-    <div class="mb-4">
+    
+    <div class="map-container mb-4">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-12">
+            <div class="col-12">
+                <div class="map-header d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="mb-0 text-primary">
+                        <i class="bi bi-geo-alt me-2"></i>Mapa de Rutas
+                    </h5>
+                </div>
                 <div id="map" class="full-map"></div>
             </div>
         </div>
     </div>
 
-    <div class="mb-2">
-        <div class="row text-center">
-            <div class="col-12 col-md-12">
-                <button type="button" class="btn btn-success" @onclick="GenerarRutaCompleta">Cómo llegar</button>
+    <div class="action-section">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 text-center">
+                <button type="button" class="btn btn-success btn-lg w-100 route-button" @onclick="GenerarRutaCompleta">
+                    <i class="bi bi-geo-alt me-2"></i>¿Cómo llegar?
+                </button>
+                <small class="text-muted mt-2 d-block">Encuentra la mejor ruta hacia tu destino</small>
             </div>
         </div>
     </div>
