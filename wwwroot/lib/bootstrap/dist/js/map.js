@@ -349,7 +349,9 @@ function initSearch() {
         const query = input.value.trim();
         resultsList.innerHTML = '';
 
-        if (!query) return alert("Escribe una dirección para buscar.");
+        // if (!query) return alert("Escribe una dirección para buscar.");
+        if (!query) return 0;
+
 
         const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
 

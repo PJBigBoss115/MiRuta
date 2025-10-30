@@ -1,4 +1,4 @@
-.hero-section {
+.banner-section {
     background: linear-gradient(135deg, #1e7b34 0%, #26b050 100%);
     color: white;
     padding: 4rem 0;
@@ -187,4 +187,11 @@
     font-size: 0.8rem;
     display: inline-flex;
     margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contacto-soporte {
+        margin-bottom: 5.0rem;
+    }
 }

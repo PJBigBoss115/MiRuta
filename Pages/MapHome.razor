@@ -1,9 +1,11 @@
 @page "/"
 @inject IJSRuntime JS
 @inject OpenRouteService RouteService
+@inject OpenWeatherService WeatherService
+
 @using System.Text.Json
 @using System.Text.Json.Serialization
-
+@using MiRuta.Models
 
 <PageTitle>Mapa</PageTitle>
 
@@ -54,6 +56,18 @@
         public List<Estacion> Estaciones { get; set; }
     }
 
+    public static class WeatherInterop
+    {
+        [JSInvokable]
+        public static async Task<WeatherResponse?> GetWeather(string city)
+        {
+            using var client = new HttpClient();
+            var service = new OpenWeatherService(client);
+            return await service.GetWeatherAsync(city);
+        }
+    }
+
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -65,6 +79,9 @@
             await JS.InvokeVoidAsync("initSearch");
 
             await JS.InvokeVoidAsync("sendStations", dotNetRef);
+
+            await JS.InvokeVoidAsync(identifier: "eval",
+                "window.WeatherBridge  = { getWeather: (city) => { return DotNet.invokeMethodAsync('MiRuta', 'GetWeather', city); } }");
         }
     }
 
@@ -277,5 +294,4 @@
 
         await DrawRoute(estacionFin.Coords, UbicacionDestino);
     }
-
 }

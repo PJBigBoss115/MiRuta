@@ -110,6 +110,10 @@
         gap: 0.5rem;
         text-align: center;
     }
+
+    .action-section {
+        margin-bottom: 5.5rem;
+    }
 }
 
 /* Estados del botón */
