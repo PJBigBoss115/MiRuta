@@ -4,7 +4,12 @@ window.mapApp = {
 
     initMap: function (dotnetHelper) {
         window.dotnetHelper = dotnetHelper;
-        
+
+        if (this.map) {
+            this.map.remove();
+            this.map = null;
+        }
+
         const map = L.map('map').setView([14.6349, -90.5069], 13);
         this.map = map;
 
@@ -315,6 +320,16 @@ window.mapApp = {
 
     },
 
+    clearMap: function () {
+        if (!this.map) return;
+
+        this.map.eachLayer((layer) => {
+            if (!(layer instanceof L.TileLayer)) {
+                this.map.removeLayer(layer);
+            }
+        });
+    },
+
     // Dibujar las Rutas
     // Se esta utilizando OpenRouteService
 
@@ -334,37 +349,46 @@ window.mapApp = {
 };
 
 // Busqueda de destino
-
 function initSearch() {
     const input = document.getElementById("searchInput");
     const button = document.getElementById("searchBtn");
     const resultsList = document.getElementById("searchResults");
 
     if (!input || !button || !resultsList) {
-        // console.warn("No se encontró el input, botón o contenedor de resultados.");
+        console.warn("No se encontró el input, botón o contenedor de resultados.");
         return;
     }
+
+    const showMessage = (message, isError = false) => {
+        resultsList.innerHTML = `<li class="list-group-item ${isError ? 'text-danger' : 'text-muted'}">${message}</li>`;
+    };
 
     button.addEventListener("click", async () => {
         const query = input.value.trim();
         resultsList.innerHTML = '';
 
-        // if (!query) return alert("Escribe una dirección para buscar.");
-        if (!query) return 0;
-
+        if (!query) {
+            showMessage("Por favor, escribe una dirección para buscar.");
+            return;
+        }
 
         const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
 
         try {
             const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error(`Error HTTP ${response.status}`);
+            }
+
             const data = await response.json();
 
             if (!data.length) {
-                resultsList.innerHTML = '<li class="list-group-item text-muted">Sin resultados</li>';
+                showMessage("Sin resultados.");
                 return;
             }
 
-            data.forEach((item, index) => {
+            data.forEach((item) => {
                 const li = document.createElement("li");
                 li.className = "list-group-item list-group-item-action";
                 li.style.cursor = "pointer";
@@ -373,11 +397,7 @@ function initSearch() {
                     const lat = parseFloat(item.lat);
                     const lon = parseFloat(item.lon);
 
-                    // Pasar la direccion aqui
-                    const coords = {
-                        lat: lat,
-                        lon: lon
-                    };
+                    const coords = { lat, lon };
 
                     window.dotnetHelper.invokeMethodAsync('destinationCoords', JSON.stringify(coords));
 
@@ -393,8 +413,8 @@ function initSearch() {
             });
 
         } catch (err) {
-            // console.error("Error en la búsqueda:", err);
-            // alert("Ocurrió un error al buscar.");
+            console.error("Error en la búsqueda:", err);
+            showMessage("Ocurrió un error al buscar. Intenta de nuevo.", true);
         }
     });
 }

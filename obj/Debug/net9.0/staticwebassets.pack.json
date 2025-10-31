@@ -229,6 +229,10 @@
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/stations.js"
     },
     {
+      "Id": "/home/pedro/MiRuta/wwwroot/lib/bootstrap/dist/js/weatherView.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/weatherView.js"
+    },
+    {
       "Id": "/home/pedro/MiRuta/wwwroot/photo_may_12_2024__9_20_05_pm__48___1__by_mvcrockett_dhfxk5b.jpg",
       "PackagePath": "staticwebassets/photo_may_12_2024__9_20_05_pm__48___1__by_mvcrockett_dhfxk5b.jpg"
     },

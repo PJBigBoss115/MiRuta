@@ -1,6 +1,5 @@
 <div class="weather-card">
     <div class="container">
-        <!-- Loading -->
         <div id="weatherLoading" class="text-center d-none">
             <div class="spinner-border text-primary" role="status">
                 <span class="visually-hidden">Cargando...</span>
@@ -8,7 +7,6 @@
             <p class="mt-2">Cargando clima...</p>
         </div>
 
-        <!-- Weather Content -->
         <div id="weatherContent" class="d-none weather-horizontal">
             <div class="weather-left">
                 <img id="weatherIcon" src="" alt="Icono del clima" class="weather-icon">
@@ -21,20 +19,19 @@
 
             <div class="weather-right">
                 <div>
-                    <small class="text-muted d-block">Humedad</small>
+                    <small class="text-white d-block">Humedad</small>
                     <span id="weatherHumidity" class="fw-semibold d-block"></span>
                 </div>
                 <div class="mt-1">
-                    <small class="text-muted d-block">Viento</small>
+                    <small class="text-white d-block">Viento</small>
                     <span id="weatherWind" class="fw-semibold d-block"></span>
                 </div>
             </div>
         </div>
 
-        <!-- Error -->
         <div id="weatherError" class="text-center d-none">
             <i class="bi bi-exclamation-triangle text-warning" style="font-size: 1.5rem;"></i>
-            <p class="mt-1 text-muted">No se pudo cargar el clima</p>
+            <p class="mt-1 text-white">No se pudo cargar el clima</p>
         </div>
     </div>
 </div>

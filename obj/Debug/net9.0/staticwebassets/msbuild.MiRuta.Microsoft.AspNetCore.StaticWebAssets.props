@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1mr6fgvqx4</Fingerprint>
-      <Integrity>SfBlE3Fv4TspimbHVhIyZq1BuJ2WY4jrHtx9DDHRvlE=</Integrity>
+      <Fingerprint>wgviujcri9</Fingerprint>
+      <Integrity>0PkDcHaH6jF/FewpPYgRWlaDuIFR0kNwVo/Br+LNmjk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -894,8 +894,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>err8fjy5vo</Fingerprint>
-      <Integrity>ijl3RjQKUPtZrJ0V0TYqxwHrhzsbwbw33G5pSheCcK0=</Integrity>
+      <Fingerprint>5bhw30m9cl</Fingerprint>
+      <Integrity>X13AZz1XUzuNF17PbmT1kJxRmnLObV6YOUC0y1lTw/c=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\map.js'))</OriginalItemSpec>
@@ -930,11 +930,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>05dxn8818m</Fingerprint>
-      <Integrity>xBfBDIy+KOMjQixaufN0KGqwggduVA1PaFyiDiIEiAE=</Integrity>
+      <Fingerprint>3cxx80nc4g</Fingerprint>
+      <Integrity>/WBBBzE6ScyiG5oiV9SnFXa7sWEE0CvdZ/R7rV6xO+s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\stations.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\weatherView.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiRuta</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>/</BasePath>
+      <RelativePath>lib/bootstrap/dist/js/weatherView.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9z1zrl0yps</Fingerprint>
+      <Integrity>Oxx2TBK4wIC/i5U8/QOM4B5Gwzos9hX75xE8uOlBBFU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\weatherView.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MiRuta.styles.css'))">
       <SourceType>Package</SourceType>
@@ -948,8 +966,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>4bip7bu71z</Fingerprint>
-      <Integrity>8DtvhVegKXgZdzLIB1PCuFZtpzNAkVyFRix7Co8vFUY=</Integrity>
+      <Fingerprint>h28xddhz0n</Fingerprint>
+      <Integrity>5wcCvk6Yms/HWPBhZXENE0AhEsHrQk95cC4/pck2Ndg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MiRuta.styles.css'))</OriginalItemSpec>

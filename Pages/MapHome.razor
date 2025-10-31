@@ -45,8 +45,9 @@
 
     public class Estacion
     {
+        [JsonPropertyName("Nombre")]
         public string Nombre { get; set; }
-        [JsonPropertyName("coords")]
+        [JsonPropertyName("Coords")]
         public double[] Coords { get; set; }
     }
 
@@ -287,6 +288,12 @@
         }
 
         var tramoEstaciones = ObtenerTramo(linea, estacionInicio, estacionFin);
+
+        await JS.InvokeVoidAsync("mapApp.clearMap");
+
+        dotNetRef = DotNetObjectReference.Create(this);
+
+            await JS.InvokeVoidAsync("mapApp.initMap", dotNetRef);
 
         await DrawRoute(UbicacionUsuario, estacionInicio.Coords);
 

@@ -1,35 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro.aguilar\\Documents\\GitHub\\MiRuta\\MiRuta.csproj": {}
+    "/home/pedro/MiRuta/MiRuta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro.aguilar\\Documents\\GitHub\\MiRuta\\MiRuta.csproj": {
+    "/home/pedro/MiRuta/MiRuta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro.aguilar\\Documents\\GitHub\\MiRuta\\MiRuta.csproj",
+        "projectUniqueName": "/home/pedro/MiRuta/MiRuta.csproj",
         "projectName": "MiRuta",
-        "projectPath": "C:\\Users\\pedro.aguilar\\Documents\\GitHub\\MiRuta\\MiRuta.csproj",
-        "packagesPath": "C:\\Users\\pedro.aguilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro.aguilar\\Documents\\GitHub\\MiRuta\\obj\\",
+        "projectPath": "/home/pedro/MiRuta/MiRuta.csproj",
+        "packagesPath": "/home/pedro/.nuget/packages/",
+        "outputPath": "/home/pedro/MiRuta/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\pedro.aguilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 25.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/pedro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Program Files\\DevExpress 25.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -66,13 +56,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.10, )",
+              "version": "[9.0.9, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.10, )",
+              "version": "[9.0.9, )",
               "autoReferenced": true
             }
           },
@@ -89,8 +79,12 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.9, 9.0.9]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[9.0.10, 9.0.10]"
+              "version": "[9.0.9, 9.0.9]"
             }
           ],
           "frameworkReferences": {
@@ -98,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
