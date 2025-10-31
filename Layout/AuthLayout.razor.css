@@ -1,0 +1,222 @@
+.auth-layout {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1e3c72 0%, #2a5298 50%, #87CEEB 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #333;
+}
+
+    .road::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: repeating-linear-gradient(
+            90deg,
+            yellow,
+            yellow 20px,
+            transparent 20px,
+            transparent 40px
+        );
+        animation: road-line 2s linear infinite;
+    }
+
+    @keyframes road-line {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-40px); }
+    }
+
+.moving-bus {
+    position: absolute;
+    bottom: 120px;
+    left: -100px;
+    animation: drive 15s linear infinite;
+    z-index: 10;
+}
+
+    @keyframes drive {
+        0% { transform: translateX(-100px); }
+        100% { transform: translateX(calc(100vw + 100px)); }
+    }
+
+.bus-body {
+    width: 120px;
+    height: 60px;
+    background: linear-gradient(135deg, #FF6B35, #FF8E53);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+    .bus-body::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 10px;
+        width: 40px;
+        height: 20px;
+        background: #FF6B35;
+        border-radius: 5px 5px 0 0;
+    }
+
+.bus-windows {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.window {
+    width: 25px;
+    height: 20px;
+    background: #87CEEB;
+    border-radius: 3px;
+    border: 1px solid #333;
+}
+
+.bus-wheels {
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    display: flex;
+    gap: 50px;
+}
+
+.wheel {
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    border: 2px solid #666;
+    animation: wheel-rotate 1s linear infinite;
+}
+
+    @keyframes wheel-rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+.mountain {
+    position: absolute;
+    bottom: 120px;
+    background: linear-gradient(45deg, #2d5a27, #3a7a32);
+    border-radius: 10px;
+}
+
+.mountain-1 {
+    width: 200px;
+    height: 150px;
+    left: 10%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.mountain-2 {
+    width: 180px;
+    height: 130px;
+    left: 40%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.mountain-3 {
+    width: 220px;
+    height: 160px;
+    left: 70%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+.cloud-1 {
+    width: 100px;
+    height: 40px;
+    top: 20%;
+    left: 10%;
+    animation: cloud-drift 25s linear infinite;
+}
+
+.cloud-2 {
+    width: 120px;
+    height: 50px;
+    top: 30%;
+    left: 40%;
+    animation: cloud-drift 30s linear infinite;
+}
+
+.cloud-3 {
+    width: 80px;
+    height: 35px;
+    top: 25%;
+    left: 70%;
+    animation: cloud-drift 20s linear infinite;
+}
+
+    @keyframes cloud-drift {
+        0% { transform: translateX(-100px); }
+        100% { transform: translateX(calc(100vw + 100px)); }
+    }
+
+.tree {
+    position: absolute;
+    bottom: 120px;
+}
+
+    .tree::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 8px;
+        height: 30px;
+        background: #8B4513;
+    }
+
+    .tree::after {
+        content: '';
+        position: absolute;
+        bottom: 30px;
+        left: -15px;
+        width: 40px;
+        height: 40px;
+        background: #228B22;
+        border-radius: 50%;
+    }
+
+    .tree-1 { left: 15%; }
+    .tree-2 { left: 35%; }
+    .tree-3 { left: 65%; }
+    .tree-4 { left: 85%; }
+
+.auth-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}

@@ -1,10 +1,20 @@
 ﻿@inherits LayoutComponentBase
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
     </div>
 
     <main>
+        <div class="top-row px-4">
+            <a href="login" class="btn btn-outline-success btn-sm me-2 auth-btn">
+                <i class="bi bi-box-arrow-in-right me-1"></i>Acceder
+            </a>
+            <a href="register" class="btn btn-success btn-sm auth-btn">
+                <i class="bi bi-person-plus me-1"></i>Registrarse
+            </a>
+        </div>
+
         <ClimaLayout />
 
         <article class="content px-4">
