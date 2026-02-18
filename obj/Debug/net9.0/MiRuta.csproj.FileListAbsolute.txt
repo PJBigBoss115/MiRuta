@@ -2189,10 +2189,10 @@ C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\scopedcss\Pages\
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\scopedcss\Pages\Register.razor.rz.scp.css
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\cxcuodnc4h-r1awzw9gv9.gz
 C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\jko8jx4leq-r1awzw9gv9.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.0dn2zdlpsv.wasm
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.vneui5vaiv.pdb
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.0dn2zdlpsv.wasm.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.vneui5vaiv.pdb.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\k8lxbkj0vb-0dn2zdlpsv.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\l3rc9jae8g-vneui5vaiv.gz
-C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\v3zwm9fuj1-pnppp3v7xo.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.n3xsddvc3k.wasm
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.h9mhsvfgjy.pdb
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.n3xsddvc3k.wasm.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\bin\Debug\net9.0\wwwroot\_framework\MiRuta.h9mhsvfgjy.pdb.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\k8lxbkj0vb-n3xsddvc3k.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\l3rc9jae8g-h9mhsvfgjy.gz
+C:\Users\pedro.aguilar\Documents\GitHub\MiRuta\obj\Debug\net9.0\compressed\v3zwm9fuj1-zvmqmfp2dt.gz
